@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentación - Jessenia Vargas</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ffffff, #eaf7ef);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      color: #1f3d2b;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 430px;
+      background: #ffffff;
+      border-radius: 25px;
+      padding: 35px 30px;
+      box-shadow: 0 20px 45px rgba(0, 80, 40, 0.15);
+      border: 1px solid #d8f0df;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: -80px;
+      right: -80px;
+      width: 180px;
+      height: 180px;
+      background: #2e8b57;
+      border-radius: 50%;
+      opacity: 0.12;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      bottom: -70px;
+      left: -70px;
+      width: 160px;
+      height: 160px;
+      background: #4caf50;
+      border-radius: 50%;
+      opacity: 0.10;
+    }
+
+    .profile {
+      position: relative;
+      z-index: 2;
+    }
+
+    .avatar {
+      width: 115px;
+      height: 115px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2e8b57, #76c893);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 42px;
+      font-weight: bold;
+      box-shadow: 0 10px 25px rgba(46, 139, 87, 0.35);
+      border: 5px solid #ffffff;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #14532d;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: #4b7c5b;
+      font-size: 15px;
+      margin-bottom: 25px;
+    }
+
+    .description {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #365944;
+      margin-bottom: 28px;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .info-item {
+      background: #f4fbf6;
+      border: 1px solid #d9f0df;
+      border-radius: 14px;
+      padding: 14px;
+      text-align: left;
+      color: #245238;
+      font-size: 15px;
+      transition: 0.3s ease;
+    }
+
+    .info-item:hover {
+      background: #e6f7ec;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(46, 139, 87, 0.12);
+    }
+
+    .info-item span {
+      font-weight: bold;
+      color: #1b7f3a;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      text-decoration: none;
+      background: #2e8b57;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s ease;
+      box-shadow: 0 8px 20px rgba(46, 139, 87, 0.25);
+    }
+
+    .btn:hover {
+      background: #1f6f43;
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      background: white;
+      color: #2e8b57;
+      border: 1px solid #2e8b57;
+      box-shadow: none;
+    }
+
+    .btn-outline:hover {
+      background: #2e8b57;
+      color: white;
+    }
+
+    footer {
+      margin-top: 28px;
+      font-size: 13px;
+      color: #6b8f75;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 30px 22px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .avatar {
+        width: 100px;
+        height: 100px;
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <div class="profile">
+
+      <div class="avatar">
+        JV
+      </div>
+
+      <h1>Jessenia Vargas</h1>
+
+      <p class="subtitle">
+        Página personal de presentación
+      </p>
+
+      <p class="description">
+        Hola, soy Jessenia Vargas. Esta es mi página web personal,
+        donde puedes encontrar mi información de contacto de manera
+        rápida, elegante y profesional.
+      </p>
+
+      <div class="info">
+        <div class="info-item">
+          <span>Teléfono:</span> +593 999 999 999
+        </div>
+
+        <div class="info-item">
+          <span>Correo:</span> jessenia.vargas@email.com
+        </div>
+
+        <div class="info-item">
+          <span>Ubicación:</span> Ecuador
+        </div>
+
+        <div class="info-item">
+          <span>Profesión:</span> Estudiante / Profesional
+        </div>
+      </div>
+
+      <div class="buttons">
+        <a href="mailto:jessenia.vargas@email.com" class="btn">
+          Enviar correo
+        </a>
+
+        <a href="tel:+593999999999" class="btn btn-outline">
+          Llamar
+        </a>
+      </div>
+
+      <footer>
+        © 2026 Jessenia Vargas | Todos los derechos reservados
+      </footer>
+
+    </div>
+  </div>
+
+</body>
+</html>
